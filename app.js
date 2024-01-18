@@ -57,7 +57,6 @@ async function fetchRepo()
         if(response.status===200)
         {
             const data=await response.json();
-            console.log(data);
             addRepo(data);
         }
     }
@@ -82,7 +81,6 @@ async function fetchProfile()
         if(response.status===200)
         {
             const data=await response.json();
-            console.log(data)
             addProfile(data);
         }
         else if(response.status===404)
@@ -96,7 +94,6 @@ async function fetchProfile()
     }
     catch(e)
     {
-        console.log(e);
         toast('Some Error Occured Try Again');
     }
     ++callsCompleted;
@@ -229,7 +226,6 @@ function addRepo(repoData)
 
 function addPagination()
 {
-    console.log('hi');
     let pageNumberHolder=document.getElementById('pageNumberHolder');
     let x=Math.min(totalPage,startPage+9);
     for(let i=startPage-1;i<=x+1;i++)
