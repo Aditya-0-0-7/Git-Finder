@@ -1,3 +1,6 @@
+![Screenshot (630)](https://github.com/Aditya-0-0-7/Git-Finder/assets/105495413/15e88d61-b262-40b8-a7b8-5c21358c6fe6)
+
+
 The application is built as per instructions. All the required features as per given below has been implemented
 1. The assignment has been done in pure HTML, CSS and javaScript.
 2. The loading is shown when API calls are made.
