@@ -1,0 +1,190 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    margin: 0;
+}
+#searchUser
+{
+    display: flex;
+    width: 70vw;
+    height:7vh;
+    border:1px solid black;
+    border-radius: 3.5vh;
+    position: fixed;
+    top:5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#userInput
+{
+    border: none;
+    height: 100%;
+    width:91%;
+    border-radius: 3.5vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+#userInput:focus
+{
+    outline: none;
+}
+#searchUserBtn
+{
+    width:8%;
+    height: 100%;
+    border-radius: 3.5vh;
+    cursor: pointer;
+}
+#profile
+{
+    width:30vw;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:fixed;
+    top:18vh;
+    left:0;
+    visibility: hidden;
+    overflow-y: auto;
+}
+#profileImage
+{
+    width:15vw;
+    height: 15vw;
+    border-radius: 7.5vw;
+    margin-bottom: 4vh;
+}
+#userName
+{
+    display: flex;
+    width:100%;
+    height:fit-content;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+}
+#bio
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    width:100%;
+    height:fit-content;
+    word-wrap: break-word;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+#location
+{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    justify-content: center;
+    font-size: 1.2vw;
+    margin-bottom: 1vh;
+}
+#twitter
+{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    justify-content: center;
+    font-size: 1.2vw;
+    margin-bottom: 1vh;
+}
+#url
+{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    justify-content: center;
+    font-size: 1.2vw;
+}
+#contentHolder
+{
+    display: flex;
+    flex-direction: column;
+    width:70vw;
+    height:80vh;
+    position:fixed;
+    top:18vh;
+    left:30vw;
+    visibility: hidden;
+}
+#pageLimiter
+{
+    height:10vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#reposList
+{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    overflow-y:auto;
+}
+#pagination
+{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+#pageNumberHolder
+{
+    width:fit-content;
+    height:fit-content;
+    display:flex;
+}
+#globalLoading
+{
+    position: fixed;
+    width:100vw;
+    height:80vh;
+    top:18vh;
+    background-color: white;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#contentLoading
+{
+    position:fixed;
+    background-color: white;
+    width:70vw;
+    height:70vh;
+    top:28vh;
+    left:30vw;
+    z-index:2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#pageLimiter
+{
+    font-weight: bold;
+}
+#pageLimit
+{
+    text-align: center;
+    margin:1vh;
+}

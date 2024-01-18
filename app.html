@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Git Finder</title>
+        <link rel="stylesheet" href="app.css">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <div id="searchUser">
+            <input type="text" id="userInput" placeholder="Search Git User">
+            <img id="searchUserBtn" src="./Images/searchIcon.png">
+        </div>
+        <div id="globalLoading"><img src="./Images/loading.gif"></div>
+        <div id="profile">
+            <img id="profileImage">
+            <div id="userName"></div>
+            <div id="bio"></div>
+            <div id="location"></div>
+            <div id="twitter"></div>
+            <div id="url"></div>
+        </div>
+        <div id="contentHolder">
+            <div id="contentLoading"><img src="./Images/loading.gif"></div>
+            <div id="pageLimiter">Number of repositories per page:<input id="pageLimit" type='number' min="1" max="100" value="10"></div>
+            <div id="reposList"></div>
+            <div id="pagination">
+                <div id="pageNumberHolder"></div>
+            </div>
+        </div>
+    </body>
+</html>
