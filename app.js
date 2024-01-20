@@ -40,28 +40,33 @@ async function fetchRepo()
     {
         const userName=document.getElementById('userInput').value;
         const response=await fetch(`https://api.github.com/users/${userName}/repos?per_page=${perPage}&page=${page}`);
-        //finding total pages and adding paging mechanism
-        if(!isPaginated&&response.headers.get('Link')!==null)
-        {
-            const linkHeader=response.headers.get('Link');
-            const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
-            totalPage= match ? parseInt(match[1]) : 1;
-            addPagination();
-        }
-        else if(!isPaginated&&response.headers.get('Link')===null)
-        {
-            totalPage=1;
-            addPagination();
-        }
-        isPaginated=true;
         if(response.status===200)
         {
+            //finding total pages and adding paging mechanism
+            if(!isPaginated&&response.headers.get('Link')!==null)
+            {
+                const linkHeader=response.headers.get('Link');
+                const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
+                totalPage= match ? parseInt(match[1]) : 1;
+                addPagination();
+            }
+            else if(!isPaginated&&response.headers.get('Link')===null)
+            {
+                totalPage=1;
+                addPagination();
+            }
+            isPaginated=true;
             const data=await response.json();
             addRepo(data);
+        }
+        else
+        {
+            document.getElementById('contentHolder').style.visibility='hidden';
         }
     }
     catch(e)
     {
+        document.getElementById('contentHolder').style.visibility='hidden';
         toast('Some Error Occured Try Again');
     }
     ++callsCompleted;
@@ -85,15 +90,18 @@ async function fetchProfile()
         }
         else if(response.status===404)
         {
+            document.getElementById('profile').style.visibility='hidden';
             toast("Entered User Name does not seem correct");
         }
         else
         {
+            document.getElementById('profile').style.visibility='hidden';
             toast("Some Error Occured Try Again");
         }
     }
     catch(e)
     {
+        document.getElementById('profile').style.visibility='hidden';
         toast('Some Error Occured Try Again');
     }
     ++callsCompleted;
